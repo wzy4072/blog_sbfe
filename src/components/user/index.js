@@ -1,9 +1,9 @@
-import UserInfo from './userInfo'
 import UserList from './userList'
+import UserAvatar from './userAvatar'
 
 const components = [
-  UserInfo,
-  UserList
+  UserList,
+  UserAvatar
 ]
 const install = function (Vue, opt={}){
     components.map(c => { Vue.use(c.name, c)})
@@ -11,7 +11,7 @@ const install = function (Vue, opt={}){
 const routes = function (){
     return [
         {path: '/user/list', name:'UserList', component: UserList},
-        {path: '/user/:id', name:'UserInfo', component: UserInfo}
+        {path: '/user/avatar', name:'UserAvatar', component: UserAvatar}
     ]
 }
 export default { install, routes };
